@@ -4,8 +4,6 @@ import numpy as np
 import pandas as pd
 import pickle as pkl 
 import streamlit as st
-import joblib
-model = joblib.load("MIPML.pkl")
 
 model = pkl.load(open('MIPML.pkl', 'rb'))
 
@@ -46,5 +44,6 @@ if st.button('Predict'):
     display_string = 'Insurance Premium will be '+ str(round(predicted_prem[0],2)) + ' Indian Rupees'
 
     st.markdown(display_string)
+
 
 
