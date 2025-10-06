@@ -4,8 +4,6 @@ import numpy as np
 import pandas as pd
 import pickle as pkl 
 import streamlit as st
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestRegressor
 
 model = pkl.load(open('MIPML.pkl', 'rb'))
 
@@ -46,6 +44,7 @@ if st.button('Predict'):
     display_string = 'Insurance Premium will be '+ str(round(predicted_prem[0],2)) + ' Indian Rupees'
 
     st.markdown(display_string)
+
 
 
 
