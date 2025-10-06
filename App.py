@@ -5,7 +5,7 @@ import pandas as pd
 import pickle as pkl 
 import streamlit as st
 
-import model = pkl.load(open('MIPML.pkl', 'rb'))
+model = pkl.load(open('MIPML.pkl', 'rb'))
 
 st.header('Medical Insurance Premium Predictor')
 
@@ -44,6 +44,7 @@ if st.button('Predict'):
     display_string = 'Insurance Premium will be '+ str(round(predicted_prem[0],2)) + ' Indian Rupees'
 
     st.markdown(display_string)
+
 
 
 
