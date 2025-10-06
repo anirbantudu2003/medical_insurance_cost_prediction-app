@@ -7,7 +7,7 @@ import streamlit as st
 
 model = pkl.load(open('MIPML.pkl', 'rb'))
 
-st.header('Medical Insurance Premium Predictor')
+st.header('Medical Insurance Cost Predictor')
 
 gender = st.selectbox('Choose Gender',['Female','Male'])
 smoker = st.selectbox('Are you a smoker ?',['Yes','No'])
@@ -44,6 +44,7 @@ if st.button('Predict'):
     display_string = 'Insurance Premium will be '+ str(round(predicted_prem[0],2)) + ' Indian Rupees'
 
     st.markdown(display_string)
+
 
 
 
