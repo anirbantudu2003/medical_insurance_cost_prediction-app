@@ -34,7 +34,7 @@ if st.button('Predict'):
     if region == 'NorthEast':
         region = 2
     else:
-        smoker = 3
+        region = 3
 
     input_data = (age, gender, bmi, children,smoker, region)
     input_data_array = np.asarray(input_data)
@@ -44,6 +44,7 @@ if st.button('Predict'):
     display_string = 'Insurance Premium will be '+ str(round(predicted_prem[0],2)) + ' Indian Rupees'
 
     st.markdown(display_string)
+
 
 
 
